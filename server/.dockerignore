@@ -1,0 +1,16 @@
+.git
+.env
+.env.*
+!.env.example
+data/
+**/__pycache__/
+**/*.pyc
+.venv/
+*.zip
+*.apk
+*.db*
+*.key
+*.pem
+*.jks
+tests/
+**/node_modules/

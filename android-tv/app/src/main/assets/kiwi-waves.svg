@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+ <linearGradient id="base" x2="1" y2="1"><stop stop-color="#111b0d"/><stop offset=".5" stop-color="#050a09"/><stop offset="1" stop-color="#17230b"/></linearGradient>
+ <linearGradient id="fold" x1="0" y1="1" x2=".65" y2="0"><stop stop-color="#0a1710"/><stop offset=".42" stop-color="#29471c"/><stop offset=".7" stop-color="#77a91b"/><stop offset=".83" stop-color="#ccff00"/><stop offset=".87" stop-color="#638b0e"/><stop offset="1" stop-color="#0a160f"/></linearGradient>
+ <linearGradient id="silk" x1=".1" y1="0" x2=".6" y2="1"><stop stop-color="#0a190e"/><stop offset=".4" stop-color="#234015"/><stop offset=".62" stop-color="#6c940e"/><stop offset=".69" stop-color="#d5ff32"/><stop offset=".73" stop-color="#426710"/><stop offset="1" stop-color="#07130c"/></linearGradient>
+ <linearGradient id="edge"><stop stop-color="#ccff00" stop-opacity="0"/><stop offset=".6" stop-color="#d9ff54" stop-opacity=".7"/><stop offset="1" stop-color="#ccff00" stop-opacity="0"/></linearGradient>
+ <radialGradient id="shade"><stop stop-color="#020607" stop-opacity=".05"/><stop offset="1" stop-color="#020607" stop-opacity=".65"/></radialGradient>
+</defs>
+<path fill="url(#base)" d="M0 0h1920v1080H0z"/>
+<path fill="url(#silk)" d="M-180-100C300-260 480 450 930 105S1480-230 2080-90L2080 150C1470-10 1270 150 1010 310S350 210-180 100Z"/>
+<path fill="url(#fold)" d="M-160 1110C300 760 490 820 840 440S1300 200 2050-60L2050 340C1540 130 1210 420 920 670S360 940-160 1210Z"/>
+<path fill="url(#silk)" d="M-100 1260C410 960 530 970 1000 750S1550 320 2100 660L2100 1250Z"/>
+<path fill="url(#fold)" d="M-160 1160C380 1170 850 1020 1130 895S1600 850 2050 1110L2050 1320H-160Z"/>
+<g fill="none" stroke="url(#edge)">
+ <path stroke-width="2" d="M-100 967C400 745 590 783 910 422S1510 180 2050 20"/>
+ <path stroke-width="3" d="M-100 128C310-50 480 399 905 152S1450-195 2010-44"/>
+ <path stroke-width="2" d="M400 1090C700 981 1000 905 1230 665S1750 433 2000 578"/>
+</g>
+<path fill="url(#shade)" d="M0 0h1920v1080H0z"/>
+</svg>

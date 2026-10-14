@@ -1,0 +1,43 @@
+/* TV-owned cinema presentation: themeable, remote focus without layout shifts. */
+html.streamport-tv body{background:#080f13!important}
+html.streamport-tv body::before{background:radial-gradient(ellipse at 110% 0%,rgba(var(--accent-rgb),.15),transparent 58%),radial-gradient(ellipse at 0% 100%,var(--theme-deep),transparent 65%),linear-gradient(145deg,#18232a,#080f13 65%)!important}
+html.streamport-tv body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(140deg,transparent 35%,rgba(var(--accent-rgb),.06) 35.1%,transparent 56%),linear-gradient(28deg,transparent 65%,rgba(var(--accent-rgb),.07) 65.1%,transparent 90%)}
+html.streamport-tv #modern-sidebar{display:none!important}
+html.streamport-tv #tv-nav{background:#0d171cf5;padding:24px 12px 16px;gap:18px}
+html.streamport-tv #tv-nav button{border-radius:10px}
+html.streamport-tv #tv-nav .selected{background:rgba(var(--accent-rgb),.12);color:var(--accent)}
+html.streamport-tv .tv-wordmark img{width:32px;height:32px;flex:none}
+html.streamport-tv .cinema-hero{border-radius:20px;border:1px solid #ffffff16;height:46vh;max-height:480px}
+html.streamport-tv .hero-content{justify-content:flex-end;padding:28px;width:80%}
+html.streamport-tv .cinema-hero:after{background:linear-gradient(0deg,#061013f2,transparent 90%),linear-gradient(90deg,#061013c0,transparent 90%)}
+html.streamport-tv .poster{border-radius:12px;border:1px solid #ffffff16}
+html.streamport-tv .poster .initial,html.streamport-tv summary,html.streamport-tv .favorite-button.is-favorite,html.streamport-tv #subtitle-status{color:var(--accent)}
+html.streamport-tv .library-tools{display:grid;grid-template-columns:250px minmax(0,1fr) auto;align-items:center;gap:18px;padding:14px 18px;border:1px solid #ffffff14;border-radius:14px;background:#ffffff05}
+html.streamport-tv .library-tools label{display:flex;flex-direction:row;align-items:center;width:auto;gap:12px}
+html.streamport-tv .library-tools select{height:44px;margin:0;min-width:0}
+html.streamport-tv .library-tools>span{padding:0;line-height:44px;margin:0}
+html.streamport-tv .media-detail,html.streamport-tv .panel{background:linear-gradient(135deg,var(--theme-deep),#111b25 80%);border:1px solid #ffffff12;border-radius:18px}
+html.streamport-tv button{border-radius:12px}
+html.streamport-tv button:focus{background:rgba(var(--accent-rgb),.16)}
+html.streamport-tv button.primary:focus,html.streamport-tv #tv-nav button:focus{background:var(--accent);color:#081015}
+html.streamport-tv .watch-progress,html.streamport-tv input[type=range]{accent-color:var(--accent)}
+html.streamport-tv progress::-webkit-progress-bar{background:#ffffff18}
+html.streamport-tv progress::-webkit-progress-value,html.streamport-tv #toast{background:var(--accent)}
+html.streamport-tv progress::-moz-progress-bar{background:var(--accent)}
+html.streamport-tv .notice,html.streamport-tv .tag{background:rgba(var(--accent-rgb),.08)}
+html.streamport-tv .episode-play,html.streamport-tv .episode-row:hover .episode-play{color:var(--accent)}
+html.streamport-tv #feature-dialog.kiwi-dialog,html.streamport-tv dialog.tv-choice,html.streamport-tv #tv-appearance,html.streamport-tv #player.android-player .sp-sheet{background:linear-gradient(145deg,var(--theme-deep),#101820 70%);border-color:#ffffff24}
+html.streamport-tv #player.android-player .sp-sheet summary{color:var(--accent)}
+html.streamport-tv #player.android-player .timeline input{accent-color:var(--accent)}
+html.streamport-tv #player.android-player .sp-toggle{background:transparent;border:0;color:var(--accent)}
+html.streamport-tv #player.android-player .sp-spinner{border-top-color:var(--accent)}
+html.streamport-tv .theme-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+html.streamport-tv #tv-appearance{width:min(750px,85vw)}
+html.streamport-tv #tv-appearance p{color:#a6b5be;font-size:14px;margin:18px 0}
+html.streamport-tv .tv-theme-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:6px}
+html.streamport-tv .tv-theme-grid button{display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:10px;text-align:left;background:#ffffff08;min-width:0}
+html.streamport-tv .tv-theme-grid button[aria-pressed=true]{border-color:var(--swatch)}
+html.streamport-tv .tv-theme-sample{display:block;width:100%;height:70px;border-radius:8px;background:radial-gradient(ellipse at 100% 0%,var(--swatch),transparent 70%),linear-gradient(140deg,var(--swatch-deep) 25%,#081015 25%,var(--swatch-deep) 66%,#081015 66%)}
+html.streamport-tv .tv-theme-grid strong{font-size:14px}
+@media(min-width:1400px){html.streamport-tv .cinema-hero .hero-content{padding:40px}html.streamport-tv .tv-theme-sample{height:100px}html.streamport-tv #tv-appearance{width:850px}}
+@media(max-height:580px){html.streamport-tv #tv-nav{gap:10px;padding-top:16px}html.streamport-tv #tv-nav button{font-size:13px;padding:6px 9px;min-height:30px}html.streamport-tv .tv-theme-sample{height:50px}}

@@ -1,0 +1,39 @@
+services:
+  streamport:
+    build: .
+    restart: unless-stopped
+    init: true
+    user: "${PUID:-1000}:${PGID:-1000}"
+    ports:
+      - "${BIND_ADDRESS:-0.0.0.0}:${STREAMPORT_PORT:-8097}:8097"
+    environment:
+      DATA_DIR: /data
+      MEDIA_DIRS: /media/movies:/media/tv
+      MAX_TRANSCODES: "${MAX_TRANSCODES:-1}"
+      COOKIE_SECURE: "${COOKIE_SECURE:-false}"
+      OPENSUBTITLES_API_KEY: "${OPENSUBTITLES_API_KEY:-}"
+      OPENSUBTITLES_USER_AGENT: "StreamPort v0.1.0"
+    volumes:
+      - type: bind
+        source: ${MOVIES_PATH:?Set MOVIES_PATH in .env}
+        target: /media/movies
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ${TV_PATH:?Set TV_PATH in .env}
+        target: /media/tv
+        read_only: true
+        bind:
+          create_host_path: false
+      - ./data:/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    stop_grace_period: 15s

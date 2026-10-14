@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MainScene" extends="Scene">
+ <script type="text/brightscript" uri="pkg:/components/MainScene.brs"/>
+ <children>
+  <Rectangle width="1280" height="720" color="#090E10"/>
+  <Rectangle width="242" height="720" color="#11191C"/>
+  <Label translation="[35,35]" text="STREAMPORT" color="#D4FF00" font="font:MediumBoldSystemFont"/>
+  <Label id="account" translation="[35,82]" width="188" height="30" color="#9CAFA8" font="font:SmallestSystemFont"/>
+  <LabelList id="nav" translation="[30,142]" itemSize="[190,54]" numRows="8" vertFocusAnimationStyle="floatingFocus" font="font:SmallSystemFont" focusedFont="font:SmallBoldSystemFont" focusBitmapUri="pkg:/images/focus.png" focusedColor="#090E10" color="#D9E1DD"/>
+  <Label id="heading" translation="[278,38]" width="915" height="48" font="font:LargeBoldSystemFont"/>
+  <Label id="status" translation="[278,96]" width="930" height="42" color="#A8B6B2" font="font:SmallSystemFont"/>
+  <MarkupGrid id="grid" translation="[278,158]" itemComponentName="MediaCard" itemSize="[226,202]" itemSpacing="[14,20]" numColumns="4" numRows="2" drawFocusFeedback="false" vertFocusAnimationStyle="fixedFocusWrap"/>
+  <Label translation="[278,657]" width="920" height="30" text="OK • Otvori     ← • Meni     Back • Nazad     ✱ • Sortiranje" color="#8D9E98" font="font:SmallestSystemFont"/>
+  <Group id="detail" visible="false">
+   <Rectangle width="1280" height="720" color="#090E10"/>
+   <Poster id="detailArt" translation="[742,60]" width="468" height="300" loadDisplayMode="scaleToFit"/>
+   <Label id="detailTitle" translation="[60,65]" width="650" height="110" wrap="true" font="font:LargeBoldSystemFont"/>
+   <Label id="detailMeta" translation="[60,185]" width="650" height="40" color="#D4FF00" font="font:SmallSystemFont"/>
+   <Label id="detailText" translation="[60,245]" width="640" height="174" wrap="true" font="font:SmallSystemFont" color="#B6C2BC"/>
+   <LabelList id="detailButtons" translation="[60,443]" itemSize="[630,49]" numRows="4" vertFocusAnimationStyle="floatingFocus" font="font:SmallSystemFont" focusedFont="font:SmallBoldSystemFont" focusBitmapUri="pkg:/images/focus.png" color="#D9E1DD" focusedColor="#090E10"/>
+  </Group>
+  <Video id="video" visible="false" width="1280" height="720"/>
+  <Rectangle id="captionBg" translation="[120,577]" width="1040" height="93" color="#000000CC" visible="false"/>
+  <Label id="caption" translation="[132,581]" width="1016" height="86" wrap="true" horizAlign="center" vertAlign="center" color="#FFFFFF" font="font:MediumBoldSystemFont"/>
+  <Timer id="progressTimer" duration="15" repeat="true"/>
+ </children>
+</component>

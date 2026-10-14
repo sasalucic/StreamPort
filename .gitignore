@@ -1,0 +1,47 @@
+# Local secrets, private application settings, database, sessions, user state
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+**/data/
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/secret.key
+**/*secret*.json
+**/*credentials*.json
+**/*token*.json
+**/signing/
+**/*.jks
+**/*.keystore
+**/*.p12
+**/*.pfx
+**/*.pem
+**/*.key
+# Generated APKs, packages, caches, build outputs
+*.apk
+*.aab
+*.zip
+**/build/
+**/build-sdk/
+**/build-tests/
+**/.gradle/
+**/node_modules/
+**/dist/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+.idea/
+.vscode/
+.DS_Store
+*.log
+# Local Docker compose overrides / generated deletion backups
+compose.override.yaml
+compose.yaml.before-delete-*
+*.bak
+*~

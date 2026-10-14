@@ -1,0 +1,10 @@
+/* APK-owned phone boundary, independent of server CSS availability. */
+html body #modern-sidebar{display:none!important}
+html .modern-brand img,html .brand img{width:35px!important;height:35px!important;max-width:35px!important;flex:none!important}
+html.modern .main,html.modern .app-header{margin-left:0!important;width:100%!important}
+html.modern .app-header>.brand,html.modern #menu-toggle{display:flex!important}
+html.modern .app-header{padding:14px 16px;gap:12px;flex-wrap:wrap}
+html.modern .app-header .brand{font-size:20px;flex:1;min-width:0}
+html.modern .app-header .search{order:5;flex:0 0 100%;max-width:none;width:100%}
+html.modern .main{padding:18px 16px 40px}
+html.modern #player.android-player .sp-toggle{background:transparent!important;border:0!important;box-shadow:none!important}

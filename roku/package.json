@@ -1,0 +1,13 @@
+{
+  "name": "streamport-roku",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "bsc --project bsconfig.json",
+    "test": "python3 tests/run_logic.py node_modules/.bin/brs"
+  },
+  "devDependencies": {
+    "brighterscript": "0.73.5",
+    "brs": "0.45.0"
+  }
+}

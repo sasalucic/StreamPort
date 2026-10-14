@@ -1,0 +1,1 @@
+Please include: component (server/web, Android, Android TV, Roku); software version; expected vs actual behavior; reproduction steps; sanitized error output; test result. **Never include API keys, IP addresses, usernames, cookies, credentials, filenames of personal media, database files or device signing keys.**

@@ -1,0 +1,1 @@
+{"rootDir":".","files":["manifest","source/**/*","components/**/*","images/**/*"],"stagingDir":"build/stage","outFile":"build/StreamPort-Roku-v1.1.0.zip","createPackage":true,"copyToStaging":true}

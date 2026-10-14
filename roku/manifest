@@ -1,0 +1,10 @@
+title=StreamPort
+major_version=1
+minor_version=1
+build_version=0
+ui_resolutions=hd
+mm_icon_side_hd=pkg:/images/icon.png
+splash_screen_hd=pkg:/images/splash.png
+splash_color=#090E10
+splash_min_time=0
+supports_input_launch=0
