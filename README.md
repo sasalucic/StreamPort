@@ -94,7 +94,7 @@ docker info
 **2. Clone the repository**, or download and extract its source ZIP. Replace the URL below with your own GitHub repository URL if using a fork:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/StreamPort.git
+git clone https://github.com/sasalucic/StreamPort.git
 cd StreamPort/server
 ```
 
