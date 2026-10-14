@@ -899,7 +899,10 @@ class Handler(BaseHTTPRequestHandler):
             partial=True
         length=max(0,end-start+1)
         self.send_response(206 if partial else 200); self.headers_common()
-        self.send_header('Content-Type',content_type or mimetypes.guess_type(p.name)[0] or 'application/octet-stream')
+        # Use RFC 9559's registered MIME type regardless of the host OS MIME registry.
+        # Some Linux registries still map .mkv to the legacy video/x-matroska.
+        media_type = content_type or ('video/matroska' if p.suffix.lower() == '.mkv' else mimetypes.guess_type(p.name)[0]) or 'application/octet-stream'
+        self.send_header('Content-Type',media_type)
         self.send_header('Content-Length',str(length))
         if media: self.send_header('Accept-Ranges','bytes')
         if partial: self.send_header('Content-Range',f'bytes {start}-{end}/{size}')

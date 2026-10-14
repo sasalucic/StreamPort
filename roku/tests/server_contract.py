@@ -34,6 +34,10 @@ with tempfile.TemporaryDirectory() as temporary:
         assert call('/api/me')[1]['name']=='RokuTest'
         rows=call('/api/library')[1];assert len(rows)==2
         assert not any(key in rows[0] for key in ['path','folder','size'])
+        # Reproduce the legacy OS-level .mkv mapping seen on Ubuntu CI runners.
+        # Streaming should still advertise the registered video/matroska type.
+        s.mimetypes.add_type('video/x-matroska', '.mkv', strict=True)
+        assert s.mimetypes.guess_type('fixture.mkv')[0] == 'video/x-matroska'
         for i,mime in [(1,'video/mp4'),(2,'video/matroska')]:
             code,data,headers=call(f'/api/media/{i}/stream',extra={'Range':'bytes=0-0'},raw=True)
             assert (code,len(data))==(206,1)
